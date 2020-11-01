@@ -1,5 +1,7 @@
 # vue3
 
+An app with small samples
+
 ## Project setup:
 ```
 npm install
