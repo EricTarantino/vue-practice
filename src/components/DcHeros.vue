@@ -38,7 +38,7 @@ export default {
     },
     computed:{
         herosCount() {
-        return this.dcHeros.length + " heros";
+        return "- " + this.dcHeros.length + " heros";
         },
         randC(){ //cached, change just when the dependency (property) changes
         return this.dcHeros.length + " " + Math.random();
