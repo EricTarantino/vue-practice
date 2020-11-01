@@ -10,7 +10,10 @@
    <p> {{randM() }} </p>
    <p> {{randM() }} </p>
    <ul>Something else
-     <li v-for="(hero,index) in dcHeros" :key="hero.name">{{hero.name}} {{index}}</li>
+     <li v-for="(hero,index) in dcHeros" :key="hero.name">
+       <div>{{hero.name}} {{index}} <button @click="removeHero(index)">X</button></div>
+       <input/>
+      </li>
    </ul>
    <form @submit.prevent="addHero">
     <input v-model.lazy="newHero" placeholder="Type hero name here"/>
@@ -48,8 +51,8 @@ export default {
         this.newHero = ''
       }
     },
-    removeHero(){
-
+    removeHero(index){
+      this.dcHeros = this.dcHeros.filter((hero ,i) => i !== index);
     },
     randM(){
       return Math.random();
