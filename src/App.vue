@@ -2,16 +2,16 @@
   <AppHeader/>
   <!--<img alt="Vue logo" src="./assets/logo.png">-->
   <div class="w-full flex">
-    <DcHeros/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import AppHeader from './components/AppHeader.vue'
-import DcHeros from  './components/DcHeros.vue'
+
 export default {
   components: {
-    AppHeader, DcHeros
+    AppHeader
   }, 
 
   data() {

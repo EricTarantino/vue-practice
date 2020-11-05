@@ -1,29 +1,18 @@
 <template>
-  <div class="m-auto">
-      <h1 class="text-2xl text-center">Dc Heros {{herosCount}}</h1>
-      <!--<h2>{{fullname}}</h2>
-      <h2>{{fname}}{{lname}}</h2>
-      <p> {{randC}} </p>
-      <p> {{randC}} </p>
-      <p> {{randC}} </p>
-      <p> {{randM() }} </p>
-      <p> {{randM() }} </p>
-      <p> {{randM() }} </p>
-      -->
-      <ul>
-        <li class="flex justify-between" v-for="(hero,index) in dcHeros" :key="hero.name">
-          <div>
-            {{hero.name}}
-          </div>
-          <button @click="removeHero(index)">X</button>
-        </li>
-      </ul>
-      <form class="mt-10" @submit.prevent="addHero">
-        <input class="border rounded" v-model.lazy="newHero" placeholder="Type hero name here"/>
-        <!--<textarea v-model="newHero"></textarea>-->
-        <button class="border rounded bg-gradient-to-r from-red-700 to-pink-500 text-white" type="submit">Add Hero</button>
-      </form>
-      <!--<button @click="setFullName">Set full name</button>-->
+    <div class="m-auto">
+        <h1 class="text-2xl my-2 text-center">Dc Heros {{herosCount}}</h1>
+        <ul>
+            <li class="flex justify-between" v-for="(hero,index) in dcHeros" :key="hero.name">
+                <div>
+                  {{hero.name}}
+                </div>
+                <button @click="removeHero(index)">X</button>
+            </li>
+        </ul>
+        <form class="mt-10" @submit.prevent="addHero">
+            <input class="border rounded" v-model.lazy="newHero" placeholder="Type hero name here"/>
+            <button class="border rounded bg-gradient-to-r from-red-700 to-pink-500 text-white" type="submit">Add Hero</button>
+        </form>      
     </div>
 </template>
 
