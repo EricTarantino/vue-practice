@@ -1,6 +1,6 @@
 # vue3
 
-An app with small samples
+A sample
 
 ## Project setup:
 ```
